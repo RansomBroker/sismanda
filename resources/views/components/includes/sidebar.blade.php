@@ -68,10 +68,78 @@
 
     <ul class="menu-inner py-1">
         <!-- Dashboard -->
-        <li class="menu-item active">
+        <li class="menu-item @if(Route::is('dashboard')) active @endif">
             <a href="{{ route('dashboard') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Dashboard</div>
+            </a>
+        </li>
+
+        <li class="menu-header small text-uppercase">
+            <span class="menu-header-text"> Kantor dan Pegawai</span>
+        </li>
+
+        <li class="menu-item @if(Route::is('office.list') || Route::is('office.add') || Route::is('office.edit')) active @endif">
+            <a href="{{ route('office.list') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-building"></i>
+                <div data-i18n="Analytics">Kantor</div>
+            </a>
+        </li>
+
+        <li class="menu-item @if(Route::is('position.list') || Route::is('position.add') || Route::is('position.edit')) active @endif">
+            <a href="{{ route('position.list') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-building"></i>
+                <div data-i18n="Analytics">Jabatan / Posisi</div>
+            </a>
+        </li>
+
+        <li class="menu-item @if(Route::is('user.list') || Route::is('user.add') || Route::is('user.edit')) active @endif">
+            <a href="{{ route('user.list') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-building"></i>
+                <div data-i18n="Analytics">Karyawan</div>
+            </a>
+        </li>
+
+        <li class="menu-header small text-uppercase">
+            <span class="menu-header-text"> Hotel</span>
+        </li>
+
+        <li class="menu-item @if(Route::is('reservation.list') || Route::is('reservation.add') || Route::is('reservation.edit')) active @endif">
+            <a href="{{ route('reservation.list') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bxs-folder-open"></i>
+                <div data-i18n="Analytics">Reservasi</div>
+            </a>
+        </li>
+
+        <li class="menu-header small text-uppercase">
+            <span class="menu-header-text"> Inventarisasi Barang</span>
+        </li>
+
+        <li class="menu-item @if(Route::is('inventory.item.list') || Route::is('inventory.item.add') || Route::is('inventory.item.edit')) active @endif">
+            <a href="{{ route('inventory.item.list') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bxs-package"></i>
+                <div data-i18n="Analytics">Barang</div>
+            </a>
+        </li>
+
+        <li class="menu-item @if(Route::is('inventory.supplier.list') || Route::is('inventory.supplier.add') || Route::is('inventory.supplier.edit')) active @endif">
+            <a href="{{ route('inventory.supplier.list') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bxs-truck"></i>
+                <div data-i18n="Analytics">Supplier</div>
+            </a>
+        </li>
+
+        <li class="menu-item @if(Route::is('inventory.incoming.good.list') || Route::is('inventory.incoming.good.add') || Route::is('inventory.incoming.good.edit')) active @endif">
+            <a href="{{ route('inventory.incoming.good.list') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-log-in-circle"></i>
+                <div data-i18n="Analytics">Barang Masuk</div>
+            </a>
+        </li>
+
+        <li class="menu-item @if(Route::is('inventory.outcoming.good.list') || Route::is('inventory.outcoming.good.add') || Route::is('inventory.outcoming.good.edit')) active @endif">
+            <a href="{{ route('inventory.outcoming.good.list') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-log-out-circle"></i>
+                <div data-i18n="Analytics">Barang Keluar</div>
             </a>
         </li>
     </ul>
